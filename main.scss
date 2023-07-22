@@ -1,0 +1,11 @@
+html, body {
+  height: 100%; /* フッターを最下部固定にするために */
+}
+
+footer {
+  position: sticky; /* フッターを最下部固定にするために */
+  top: 100%; /* フッターを最下部固定にするために */
+  color: white;
+  text-align: center;
+  @apply bg-green-400 text-xl py-10;
+}
