@@ -10,6 +10,9 @@ module.exports = {
         fourth: "#fdc57b",
       },
     },
+    container: {
+      center: true,
+    },
   },
   plugins: [
     // テーマのdaisyUI読込
