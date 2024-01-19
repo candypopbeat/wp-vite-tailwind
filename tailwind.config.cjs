@@ -1,43 +1,24 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: [
-		"./*.php",
-		"./assets/**/*.js",
-		"./assets/*.js",
-	],
+  content: ["./*.php", "./assets/**/*.js", "./assets/*.js"],
   theme: {
-    extend: {},
-    screens: {
-      sp: "400px",
-      tb: "768px",
-      pc: "1280px",
+    extend: {
+      colors: {
+        first: "#394a51",
+        second: "#7fa99b",
+        third: "#fbf2d5",
+        fourth: "#fdc57b",
+      },
     },
   },
   plugins: [
     // テーマのdaisyUI読込
     require("daisyui"),
-    function({addComponents}) {
-      addComponents({
-        // 新規コンテナサイズ
-        ".container": {
-          maxWidth: "95%",
-          "@screen sp": {
-            maxWidth: "80%",
-          },
-          "@screen tb": {
-            maxWidth: "768px",
-          },
-          "@screen pc": {
-            maxWidth: "1200px"
-          }
-        }
-      })
-    },
   ],
-	daisyui: {
+  daisyui: {
     // 使用テーマ
     themes: ["light", "dark", "fantasy"],
     // ユーザー環境がダークモードのときのテーマ指定
     darkTheme: "fantasy",
   },
-}
+};
